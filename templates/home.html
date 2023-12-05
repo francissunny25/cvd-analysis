@@ -1,0 +1,253 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Cardio Vascular Risk</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Cardio Vascular Risk Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">How Healthy do you feel?</label>
+            <select class="form-control" name="health" placeholder="health" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Poor">
+                    Poor
+                </option>
+                <option value="Fair">
+                    Fair
+                </option>
+                <option value="Good">
+                    Good
+                </option>                
+                <option value="Very Good">
+                    Very Good
+                </option>
+                <option value="Excellent">
+                    Excellent
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">When was your last chekup?</label>
+            <select class="form-control" name="checkup" placeholder="checkup" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Never">
+                    Never
+                </option>
+                <option value="Within the past year">
+                    Within the past year
+                </option>
+                <option value="Within the past 2 years">
+                    Within the past 2 years
+                </option>                
+                <option value="Within the past 5 years">
+                    Within the past 5 years
+                </option>
+                <option value="5 or more years ago">
+                    5 or more years ago
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <select class="form-control" name="age" placeholder="age" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="18-24">
+                    18-24
+                </option>
+                <option value="25-29">
+                    25-29
+                </option>
+                <option value="30-34">
+                    30-34
+                </option>                
+                <option value="35-39">
+                    35-39
+                </option>
+                <option value="40-45">
+                    40-45
+                </option>
+                <option value="46-50">
+                    46-50
+                </option>
+                <option value="51-55">
+                    51-55
+                </option>
+                <option value="56-60">
+                    56-60
+                </option>                
+                <option value="61-65">
+                    61-65
+                </option>
+                <option value="66-70">
+                    66-70
+                </option>
+                <option value="71-75">
+                    71-75
+                </option>
+                <option value="76-80">
+                    76-80
+                </option>
+                <option value="80+">
+                    80+
+                </option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Exercise</label>
+            <select class="form-control" name="exercise" placeholder="exercise" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Skin Cancer</label>
+            <select class="form-control" name="skin_cancer" placeholder="skin_cancer" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Other Cancer</label>
+            <select class="form-control" name="other_cancer" placeholder="other_cancer" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Depression</label>
+            <select class="form-control" name="depression" placeholder="depression" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Diabetes</label>
+            <select class="form-control" name="diabetes" placeholder="diabetes" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Arthritis</label>
+            <select class="form-control" name="arthritis" placeholder="arthritis" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Sex</label>
+            <select class="form-control" name="sex" placeholder="sex" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Male">
+                    Male
+                </option>
+                <option value="Female">
+                    Female
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Smoking History</label>
+            <select class="form-control" name="smoking" placeholder="smoking" required>
+                <option class="placeholder" selected disabled value="">Select an option</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Height (cm)</label>
+            <input class="form-control" type="number" name="height"
+                placeholder="Enter your Height in cm" min='90' max='250' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Weight (kg)</label>
+            <input class="form-control" type="number" name="weight"
+                placeholder="Enter your Weight in kg" min='25' max='300' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">BMI (cm)</label>
+            <input class="form-control" type="number" name="bmi"
+                placeholder="Enter your BMI" min='12' max='70' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Alchol Consumed</label>
+            <input class="form-control" type="number" name="alcohol_units"
+                placeholder="Units of alcohol consumed in a month" min='0' max='300' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Fruits Consumed</label>
+            <input class="form-control" type="number" name="fruit_units"
+                placeholder="Number of times fruits were consumed in a month" min='0' max='300' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Green Vegetables Consumed</label>
+            <input class="form-control" type="number" name="veg_units"
+                placeholder="Number of times veggies were consumed in a month" min='0' max='300' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Fried Potatoes Consumed</label>
+            <input class="form-control" type="number" name="potato_units"
+                placeholder="Number of times potatoes were consumed in a month" min='0' max='300' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict if you are going to die of heart break" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
